@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+
+}
+.header {
+    color: #F76539;
+    border-bottom: 3px solid #F76539;
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    width: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFF;
+}
+
+.navbar a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.agora{
+    font-weight: 600;
+}
+
+/* Banner */
+
+.banner-login {
+    height: 500px;
+    color: #FFF;
+    background-size: 1500px 540px;
+    background-image: url("https://i.pinimg.com/originals/bd/7b/15/bd7b152a9d7b87069a04e1543cda148f.jpg");
+
+    /*filter: blur(10px);*/
+}
+
+/*login cisco*/
+
+.banner-login {
+    color: white;
+    height: 550px;
+  }
+  
+  .banner-login .container {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-login {
+    color: #E8383B;
+  }
+
+  .banner-login .card {
+    background-color: #FFC629;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .banner-login a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .banner-login #div_erros_login {
+    margin-top: 15px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+
+/*Tela de cadastro*/
+input {
+    height: 30px;
+    border: 2px solid #B32D2E;
+    border-radius: 10px;
+  }
+  
+  .btn {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #E8383B;
+    width: 120px;
+    align-self: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+
+/* Footer */
+
+.footer {
+    background-color: #E8383B;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container {
+    justify-content: center;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
