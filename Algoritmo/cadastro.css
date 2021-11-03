@@ -40,8 +40,8 @@ body{
 .banner-login {
     height: 500px;
     color: #FFF;
-    background-size: 1500px 540px;
-    background-image: url("https://i.pinimg.com/originals/bd/7b/15/bd7b152a9d7b87069a04e1543cda148f.jpg");
+    background-size: 1500px 550px;
+    background-image: url("https://pa1.narvii.com/6562/cee2c8ec596d877902bab7558e6736cda8046bb0_hq.gif");
 
     /*filter: blur(10px);*/
 }
@@ -68,6 +68,8 @@ body{
     background-color: #FFC629;
     height: 450px;
     width: 400px;
+    border-radius: 20px;
+    border: #F76539 outset 7px;
     display: flex;
     justify-content: center;
     align-content: space-around;

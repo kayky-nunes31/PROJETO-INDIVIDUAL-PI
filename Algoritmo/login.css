@@ -40,8 +40,9 @@ body{
 .banner {
     height: 500px;
     color: #FFF;
-    background-size: 1500px 540px;
-    background-image: url("https://i.pinimg.com/originals/bd/7b/15/bd7b152a9d7b87069a04e1543cda148f.jpg");
+    background-size: 1400px 570px;
+    background-image: url("https://i.pinimg.com/originals/be/85/36/be8536a1a6f19315aa6d3ef9c5554e1b.gif");
+    /*https://i.pinimg.com/originals/05/86/03/058603950efc8cc291921506d330debc.gif*/
 
     /*filter: blur(10px);*/
 }
@@ -67,6 +68,8 @@ body{
 /*Tela de login*/
 .tela_log {
     background-color: #FFC629;
+    border-radius: 20px;
+    border: outset #F76539 7px;
     width: 550px;
     height: 400px;
     margin-left: 260px;
