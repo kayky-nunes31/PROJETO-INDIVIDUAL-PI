@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+
+}
+.header {
+    color: #F76539;
+    border-bottom: 3px solid #F76539;
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    width: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFF;
+}
+
+.navbar a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.agora{
+    font-weight: 600;
+}
+
+/* Perfil */
+.perfil {
+    background-color: blueviolet;
+    height: 500px;
+}
+
+.foto_perfil {
+    width: 250px;
+    height: 250px;
+    background-color: crimson;
+    border-radius: 150px;
+    border: #000000 outset 5px;
+    margin-left: 30px;
+    background-image: url(https://avatars.githubusercontent.com/u/89268311?s=400&u=27a3fdc05cbacee13f32479c71920efff02663fa&v=4);
+    background-size: 250px;
+}
+
+.bibliografia h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 640px;
+    color: #F76539;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #E8383B;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container {
+    justify-content: center;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+PALETA DE CORES
+VERMELHOR ESCURO: #B32D2E;
+VERMELHO: #E8383B;
+AMARELO: #FFC629;
+PRETO XOXO: #4D4933;
+LARANJA BALA: #F76539;
+*/
