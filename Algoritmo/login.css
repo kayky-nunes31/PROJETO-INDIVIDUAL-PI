@@ -8,10 +8,11 @@ body {
 #meu_video {
   object-fit: cover;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   position: fixed;
   top: 0;
   left: 0;
+  margin-top: 80px;
 }
 
 /*HEADER*/
@@ -78,7 +79,7 @@ body {
 
 /*Tela de login*/
 .tela_log {
-  background-color: #ffc629;
+  background-color: #ffc629a2;
   border-radius: 20px;
   border: outset #f76539 7px;
   width: 550px;
@@ -88,12 +89,12 @@ body {
 }
 
 h2 {
-  color: #e8383b;
-  margin-left: 200px;
+  color: #e21a1d;
+  margin-left: 110px;
 }
 
 h3 {
-  color: #e8383b;
+  color: #e21a1d;
   margin-left: 240px;
 }
 
@@ -103,6 +104,7 @@ input {
   width: 330px;
   height: 50px;
   margin-left: 100px;
+  background-color: #e8383b00;
 }
 
 .me_ajuda_Rafa {
