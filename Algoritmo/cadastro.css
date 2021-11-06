@@ -5,6 +5,10 @@ body{
     background-color: #000000;
 
 }
+#logo_LeDessin {
+    height: 12vh;
+}
+
 .header {
     color: #F76539;
     border-bottom: 3px solid #F76539;
