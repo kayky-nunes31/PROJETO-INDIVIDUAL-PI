@@ -34,7 +34,7 @@
         <!-- DIV COM OS DEMAIS BOTÕES -->
     <div class="botoes_boxes">    
     <button class="botoes" onclick="mostrar_dados()">Bibliografia</button>    
-    <button class="botoes">Menção Honrosa</button>
+    <button class="botoes" onclick="mensao_honrosa()">Menção Honrosa</button>
     <select class="botoes">
         <option value="desenhos">Desenhos</option>
         <option value="antigos">Antigos</option>
@@ -45,6 +45,11 @@
     </select>
     </div>
     </div>
+    <!--<img src="imgs_vd/familia.jpg" width="100px">
+    <img src="imgs_vd/amigos.jpg" width="100px">
+    <img src="imgs_vd/familia_amigos.jpg" width="100px">
+    <img src="imgs_vd/primos.jpg" width="100px">
+    <img src="imgs_vd/bandtec.jpg" width="100px">-->
 
     <!-- FOOTER -->
     <div class="footer">
@@ -65,9 +70,14 @@
                 encontrei neles uma forma de me expressar. <br>
                 Hoje tenho 18 anos, amigos incriveis e uma grande família, esse é um pouco da minha história.</h4>`;
         }
-        
-        function mensao_honrosa() {
 
+        function mensao_honrosa() {
+            div_mostrar.innerHTML = `<img src="imgs_vd/vovó.jpg" width="100px" style="margin-left: 290px;"> <br>
+            <img src="imgs_vd/familia.jpg" width="100px" style="margin-left: 120px;"> 
+             <img src="imgs_vd/primos.jpg" width="100px" style="margin-left: 250px;">  <br>
+            <img src="imgs_vd/familia_amigos.jpg" width="160px"  height="110px" style="margin-left: 20px;"> 
+             <img src="imgs_vd/amigos.jpg" width="140px"  height="120px" style="margin-left: 90px;"> 
+              <img src="imgs_vd/bandtec.jpg" width="90px" height="100px" style="margin-left: 170px;">`;
         }
 
         function meus_desenhos() {

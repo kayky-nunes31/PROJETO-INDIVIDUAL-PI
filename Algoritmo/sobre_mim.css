@@ -64,8 +64,9 @@ body{
 
 .conteudo {
     width: 700px;
-    height: 300px;
+    height: 362px;
     margin-left: 350px;
+    margin-top: -22px;
     background-color: chartreuse;
 }
 
