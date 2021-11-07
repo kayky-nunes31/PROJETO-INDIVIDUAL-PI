@@ -29,17 +29,32 @@
 
     <!-- BANNER -->
     <!-- LOGIN -->
-    <div class="banner">
+    <div class="banner-login">
         <div class="container">
-            <div class="tela_log">
-                <h2>Vamos começar a desenhar!</h2>
-                <h3>E-mail:</h3>
-                <input>
-                <h3>Senha:</h3>
-                <input>
-                <button id="entrar">Entrar</button>
-                <div class="me_ajuda_Rafa"> 
-                <button id="entrar_V2">Cadastrar</button>
+            <div class="card medio">
+                <h2>Hora de desenhar!</h2>
+                <div class="formulario">
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+                        E-mail:
+                        <input name="email" type="text" placeholder="Login">
+                        <br>
+                        Senha:
+                        <input name="senha" type="password" placeholder="******">
+                        <br>
+                        <button class="btn" type="submit">
+                            Entrar
+                        </button>
+                    </form>
+
+
+                </div>
+
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
                 </div>
             </div>
         </div>
@@ -53,3 +68,75 @@
     </div>
 </body>
 </html>
+
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_login").reset();
+    }
+
+    function entrar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
+
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");
+
+        console.log("FORM LOGIN: ", email);
+        console.log("FORM SENHA: ", senha);
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (email == "" || senha == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>
