@@ -50,7 +50,7 @@ body{
     height: 250px;
     background-color: crimson;
     border-radius: 150px;
-    border: #000000 outset 5px;
+    border: #F76539 outset 5px;
     margin-left: 30px;
     background-image: url(https://avatars.githubusercontent.com/u/89268311?s=400&u=27a3fdc05cbacee13f32479c71920efff02663fa&v=4);
     background-size: 250px;
@@ -73,7 +73,7 @@ body{
 .botoes_boxes {
     width: 262px;
     height: 300px;
-    background-color: crimson;
+    /*background-color: crimson;*/
     margin-left: 1086px;
     margin-bottom: 200px;
     display: flex;
