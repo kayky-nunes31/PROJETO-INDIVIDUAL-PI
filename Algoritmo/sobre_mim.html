@@ -21,17 +21,17 @@
                 </ul>
         </div>
     </div>
-
+    <!-- PERFIL DO CRIADOR / FOTO E DIVS -->
     <div class="perfil">    
         <div class="foto_perfil">
             <div class="bibliografia">
                 <h1>Kayky Hyan Nunes</h1>
                 <div class="conteudo">
-
+                    <div id="div_mostrar"></div>
                 </div>
             </div>
         </div>
-        
+        <!-- DIV COM OS DEMAIS BOTÕES -->
     <div class="botoes_boxes">    
     <button class="botoes" onclick="mostrar_dados()">Bibliografia</button>    
     <button class="botoes">Menção Honrosa</button>
@@ -56,7 +56,21 @@
 </html>
 
     <script>
+        // MINHA BIBLIOGRAFIA
         function mostrar_dados() {
-            div_mostrar.innerHTML = ``;
+            div_mostrar.innerHTML = `<h4>Olá eu sou o Kayky e esse é o meu perfil, atualmente sou um aluno BandTec, faço também um curso de playgame na Saga Tatuapé e pretendo iniciar a autoescola e um curso de inglês o quanto antes. <br>
+                O desenho sempre esteve presente na minha vida, como alguns familiares meus gostam de dizer parece que foi passado de geração em geração, isso pois meus tios desenham, meu primo, eu e agora meu priminho. <br> 
+                Sempre amei desenhar e eu me destacava em algumas atividades por conta disso, desenhava meus personagens favoritos e demais coisas (objetos, lugares ou qualquer outra coisa que me chamasse a atenção). 
+                No 9º ano eu já desenhava relativamente bem e foi nesse ano que eu parei de colorir meus desenhos, após o falecimento de uma das pessoas mais importantes da minha vida e assim ela se tornou preto e branco, depois disso passei a desenhar os meus sentimentos,
+                encontrei neles uma forma de me expressar. <br>
+                Hoje tenho 18 anos, amigos incriveis e uma grande família, esse é um pouco da minha história.</h4>`;
+        }
+        
+        function mensao_honrosa() {
+
+        }
+
+        function meus_desenhos() {
+
         }
     </script>
