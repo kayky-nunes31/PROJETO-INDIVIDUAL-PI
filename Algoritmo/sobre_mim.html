@@ -25,18 +25,23 @@
     <div class="perfil">    
         <div class="foto_perfil">
             <div class="bibliografia">
-                <h1>Bibliografia</h1>
+                <h1>Kayky Hyan Nunes</h1>
+                <div class="conteudo">
+
+                </div>
             </div>
         </div>
         
     <div class="botoes_boxes">    
-    <button>Bibliografia</button>    
-    <button>Menção Honrosa</button>
-    <select>
+    <button class="botoes" onclick="mostrar_dados()">Bibliografia</button>    
+    <button class="botoes">Menção Honrosa</button>
+    <select class="botoes">
+        <option value="desenhos">Desenhos</option>
         <option value="antigos">Antigos</option>
         <option value="realistas">Realistas</option>
         <option value="animes">Animes</option>
         <option value="sombreados">Sombreados</option>
+        <option value="todos">Todos</option>
     </select>
     </div>
     </div>
@@ -49,3 +54,9 @@
     </div>
 </body>
 </html>
+
+    <script>
+        function mostrar_dados() {
+            div_mostrar.innerHTML = ``;
+        }
+    </script>
