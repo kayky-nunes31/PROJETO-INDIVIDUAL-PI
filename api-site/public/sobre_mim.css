@@ -68,7 +68,18 @@ body{
     margin-left: 350px;
     margin-top: -22px;
     background-color: chartreuse;
+    overflow-y: scroll;
 }
+    .conteudo::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+    }
+    .conteudo::-webkit-scrollbar-track {
+    background:#000000;
+    }
+    .conteudo::-webkit-scrollbar-thumb {
+        background: #F76539;
+        }
 
 .botoes_boxes {
     width: 262px;
