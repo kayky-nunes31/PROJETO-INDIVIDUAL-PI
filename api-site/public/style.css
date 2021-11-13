@@ -68,7 +68,7 @@ body{
 
 /* Imagens dos seguidores */
 .imgs_seguidores {
-    background-color: blue;
+    /*background-color: blue;*/
     height: 370px;
     display: flex;
     align-items: center;
@@ -76,10 +76,12 @@ body{
 }
 
 .img_1 {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     width: 300px;
     height: 300px;
     margin-left: 50px;
+    border: #F76539 outset 2px;
+    border-radius: 20px;
 }
 
 .img_1 img {
@@ -89,9 +91,11 @@ body{
 }
 
 .img_2 {
-    background-color: crimson;
+    /*background-color: crimson;*/
     width: 300px;
     height: 300px;
+    border: #F76539 outset 2px;
+    border-radius: 20px;
 }
 
 .img_2 img {
@@ -101,10 +105,12 @@ body{
 }
 
 .img_3 {
-    background-color: fuchsia;
+    /*background-color: fuchsia;*/
     width: 300px;
     height: 300px;
     margin-right: 50px;
+    border: #F76539 outset 2px;
+    border-radius: 20px;
 }
 
 .img_3 img {
@@ -121,19 +127,31 @@ body{
 }
 
 #coracao {
-    background-color: gold;
-    width: 50px;
-    height: 50px;
-    transform: rotate(-45deg);
-    border-radius: 100px 100px 100px 0px;
+    width: 30px;
+    height: 60px;
+    margin-right: 150px;
+    /*transform: rotate(-45deg);*/
+    /*border-radius: 100px 100px 100px 0px;*/
 }
+
+#coracao img {
+    width: 60px;
+    height: 65px;
+    margin-right: 200px;
+}
+
 #comentario {
     background-color: #FFF;
     border: #F76539 solid;
     width: 50px;
     height: 50px;
     border-radius: 100px 100px 100px 0px;
-    margin-left: 70px;
+    margin-right: 70px;
+}
+span {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    color: #F76539;
 }
 
 /* Footer */
