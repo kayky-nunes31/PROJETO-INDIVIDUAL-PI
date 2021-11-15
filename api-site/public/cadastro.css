@@ -69,11 +69,11 @@ body{
   }
 
   .banner-login .card {
-    background-color: #FFC629;
+    background-color: #ffc629c4;
     height: 450px;
     width: 400px;
     border-radius: 20px;
-    border: #F76539 outset 7px;
+    border: #f76539b6 outset 7px;
     display: flex;
     justify-content: center;
     align-content: space-around;

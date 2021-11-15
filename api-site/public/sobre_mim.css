@@ -41,7 +41,7 @@ body{
 
 /* Perfil */
 .perfil {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     height: 500px;
 }
 
@@ -67,7 +67,7 @@ body{
     height: 362px;
     margin-left: 350px;
     margin-top: -22px;
-    background-color: chartreuse;
+    /*background-color: chartreuse;*/
     overflow-y: scroll;
 }
     .conteudo::-webkit-scrollbar {

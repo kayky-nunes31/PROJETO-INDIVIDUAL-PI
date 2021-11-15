@@ -1,6 +1,6 @@
 // MINHA BIBLIOGRAFIA
 function mostrar_dados() {
-    div_mostrar.innerHTML = `<h4>Olá eu sou o Kayky e esse é o meu perfil, atualmente sou um aluno BandTec, faço também um curso de playgame na Saga Tatuapé e pretendo iniciar a autoescola e um curso de inglês o quanto antes. <br>
+    div_mostrar.innerHTML = `<h4 style="color: #F76539;">Olá eu sou o Kayky e esse é o meu perfil, atualmente sou um aluno BandTec, faço também um curso de playgame na Saga Tatuapé e pretendo iniciar a autoescola e um curso de inglês o quanto antes. <br>
         O desenho sempre esteve presente na minha vida, como alguns familiares meus gostam de dizer parece que foi passado de geração em geração, isso pois meus tios desenham, meu primo, eu e agora meu priminho. <br> 
         Sempre amei desenhar e eu me destacava em algumas atividades por conta disso, desenhava meus personagens favoritos e demais coisas (objetos, lugares ou qualquer outra coisa que me chamasse a atenção). 
         No 9º ano eu já desenhava relativamente bem e foi nesse ano que eu parei de colorir meus desenhos, após o falecimento de uma das pessoas mais importantes da minha vida e assim ela se tornou preto e branco, depois disso passei a desenhar os meus sentimentos,
