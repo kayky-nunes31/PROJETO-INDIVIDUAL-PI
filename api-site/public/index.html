@@ -50,7 +50,7 @@
                     <img src="imgs_vd/coração_projeto.png" onclick="cont_likes_6()">
                     <span id="curtidas_6">0</span>
                 </div>
-                <div id="comentario"></div>
+                <div id="comentario" onclick="comentario_11()"></div>
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                     <img src="imgs_vd/coração_projeto.png" onclick="cont_likes_5()">
                     <span id="curtidas_5">0</span>
                 </div>
-                <div id="comentario"></div>
+                <div id="comentario" onclick="comentario_11()"></div>
             </div>
         </div>
 
@@ -74,7 +74,7 @@
                     <img src="imgs_vd/coração_projeto.png" onclick="cont_likes_4()">
                     <span id="curtidas_4">0</span>
                 </div>
-                <div id="comentario"></div>
+                <div id="comentario" onclick="comentario_11()"></div>
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
                     <img src="imgs_vd/coração_projeto.png" onclick="cont_likes_3()">
                     <span id="curtidas_3">0</span>
                 </div>
-                <div id="comentario"></div>
+                <div id="comentario" onclick="comentario_11()"></div>
             </div>
         </div>
 
@@ -101,7 +101,7 @@
                     <img src="imgs_vd/coração_projeto.png" onclick="cont_likes_2()">
                     <span id="curtidas_2">0</span>
                 </div>
-                <div id="comentario"></div>
+                <div id="comentario" onclick="comentario_11()"></div>
             </div>
         </div>
 
@@ -113,7 +113,7 @@
                     <img src="imgs_vd/coração_projeto.png" onclick="cont_likes()">
                     <span id="curtidas">0</span>
                 </div>
-                <div id="comentario"></div>
+                <div id="comentario" onclick="comentario_11()"></div>
             </div>
         </div>
     </div>
@@ -157,5 +157,10 @@
     function cont_likes_6() {
         numero_6 = numero_6 + 1;
         curtidas_6.innerHTML = numero_6;
+    }
+    function comentario_11() {
+        var comentarioo = comentario.value;
+
+        alert("Para comentar e para que a quantidade de curtidas salve você precisa efetuar o login"); 
     }
 </script>
