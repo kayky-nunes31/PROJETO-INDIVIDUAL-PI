@@ -53,70 +53,103 @@
 
         </div>
 
-        <div class="dash">
-            <div class="regua">
-                <div class="item-regua perigo-frio">
-                    <h4>Perigo</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua alerta-frio">
-                    <h4>Alerta</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua ideal">
-                    <h4>Ideal</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua alerta-quente">
-                    <h4>Alerta</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua perigo-quente">
-                    <h4>Perigo</h4>
-                    <h2>0°C</h2>
-                </div>
-            </div>
-
-            <div class="cards">
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_1">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_1"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_2">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_2"></div>
-
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_3">-°C</p>
-                    </div>
-                    <div class="cor-alerta ideal" id="card_3"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_4">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_4"></div>
-                </div>
-
-            </div>
-
+        <!-- Inicio do perfil do cadastro, dash (body), 
+    regua (onde se localiza a foto da pessoa), 
+perfil (onde está sua foto)  -->
+<div class="dash">
+    <div class="regua">
+        <div class="perfil">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png">
         </div>
     </div>
+
+    <div class="cards">
+        <div class="card">
+            <h1>Publicar Status</h1>
+            <div class="temperatura">
+                <input id="input_status">
+                <button onclick="postar_status()">Publicar</button>
+                <br>
+                <div id="div_mostrar_status"></div>
+            </div>
+            <div class="cor-alerta" id="card_1"></div>
+        </div>
+        <div class="card">
+            <h1>Escolher Status</h1>
+            <div class="temperatura">
+                <input id="input_status">
+                <button onclick="visualizar_status()">Visualizar</button>
+                <br>
+                <div id="div_mostrar_status_2"></div>
+            </div>
+            <div class="cor-alerta" id="card_2"></div>
+
+        </div>
+        <div class="card">
+            <h1>Quantidade de Status</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_3">0</p>
+            </div>
+            <div class="cor-alerta" id="card_3"></div>
+        </div>
+        <div class="card">
+            <h1>Quantidade de Status</h1>
+            <div class="temperatura">
+                <p id="temp_aquario_4">0</p>
+            </div>
+            <div class="cor-alerta" id="card_4"></div>
+        </div>
+
+    </div>
+
+</div>
+</div>
 
 
 </body>
 
 <script>
+
+var lista_status = [];
+    function postar_status() {
+        var add_status = input_status.value;
+        var imagem = `<img width="300px" src="${add_status}">`;
+        lista_status.push(add_status);
+
+        div_mostrar_status.innerHTML = ''
+        for(var contador = 0; contador < lista_status.length; contador ++){
+                div_mostrar_status.innerHTML += imagem; 
+        }
+    }
+/*
+<script src="../js/funcoes.js"><script>
+
+div_mostrar_status.innerHTML = "";
+var imagem = `<img width="300px" src="${add_status}">`;
+*/
+function visualizar_status() {
+            var ordem = [];
+            var add_status = input_status.value;
+            var qtd_status = 0;
+
+            var numero_status = false;
+            for(var contador = 0; contador < lista_status.length; contador ++) {
+            if(lista_status[contador] == add_status) {
+                numero_status = true;
+
+                qtd_status = qtd_status + 1;
+                ordem.push(contador + 1);
+            }
+        }
+        if (numero_status == true) {
+            div_mostrar_status_2.innerHTML = `Você já postou essa linha ${qtd_status}ª vezes, nessa ordem: ${ordem}`;
+        } else {
+            div_mostrar_status_2.innerHTML = "Você não postou status";
+        }
+    }
+
+
+
 
     function atualizacaoPeriodica() {
         obterdados(1);
