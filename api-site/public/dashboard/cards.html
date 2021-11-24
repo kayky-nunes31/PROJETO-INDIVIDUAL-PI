@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imgs_vd/logo_LeDessin.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,38 +64,43 @@ perfil (onde está sua foto)  -->
     </div>
 
     <div class="cards">
+        <!-- DIV 1 ONDE VAI PUBLICAR OS STATUS E ARMAZENAR NO VETOR -->
         <div class="card">
             <h1>Publicar Status</h1>
             <div class="temperatura">
                 <input id="input_status">
-                <button onclick="postar_status()">Publicar</button>
+                <button onclick="postar_status()" class="button_status">Publicar</button>
                 <br>
                 <div id="div_mostrar_status"></div>
             </div>
             <div class="cor-alerta" id="card_1"></div>
         </div>
+        <!-- DIV 2 ESCOLHER QUAL STATUS QUER VER -->
         <div class="card">
             <h1>Escolher Status</h1>
             <div class="temperatura">
                 <input id="">
-                <button onclick="visualizar_status()">Visualizar</button>
+                <button onclick="visualizar_status()" class="button_status">Visualizar</button>
                 <br>
                 <div id="div_mostrar_status_2"></div>
             </div>
             <div class="cor-alerta" id="card_2"></div>
 
         </div>
+        <!-- DIV 3 QTD STATUS -->
         <div class="card">
             <h1>Quantidade de Status</h1>
             <div class="temperatura">
-                <p id="temp_aquario_3">0</p>
+                <p id="p_status">0</p>
             </div>
             <div class="cor-alerta" id="card_3"></div>
         </div>
-        <div class="card">
-            <h1>Quantidade de Status</h1>
+        <!-- DIV 4 ONDE O STATUS IRÁ APARECER -->
+        <div class="card" id="div_mostrar_status">
+            <!--<h1>Quantidade de Status</h1>
             <div class="temperatura">
                 <p id="temp_aquario_4">0</p>
+                 <div id="div_mostrar_status"></div>-->
             </div>
             <div class="cor-alerta" id="card_4"></div>
         </div>
@@ -146,6 +151,7 @@ function visualizar_status() {
         } else {
             div_mostrar_status_2.innerHTML = "Você não postou status";
         }
+        p_status.innerHTML = `${qtd_status}`;
     }
 
 

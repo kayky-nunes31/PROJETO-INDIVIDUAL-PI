@@ -180,16 +180,7 @@ body {
   padding-top: 15px;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 450px;
-  width: 100%;
-  align-items: center;
-  color: white;
-}
-
+/* DIV's que vou mudar inicio*/
 .card {
   margin: 2%;
   width: 40%;
@@ -198,8 +189,10 @@ body {
   text-align: center;
   height: 180px;
   justify-content: right;
-  background-color: #212124;
+  background-color: #E8383B;
   font-size: 20px;
+  border: #ff7043 outset 5px;
+  border-radius: 12px;
 }
 
 .card p {
@@ -214,9 +207,28 @@ body {
   width: 100%;
   border-bottom: solid white 1px;
   text-align: left;
-  font-weight: lighter;
+  font-weight: 400;
   margin: 20px;
 }
+
+#div_mostrar_status {
+  width: 40%;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_status {
+  width: 30%;
+  height: 42%;
+  background-color: #960303;
+  color: #000;
+  border: #ff7043 solid 3px;
+  border-radius: 12px;
+}
+
+/* DIV's que vou mudar inicio*/
 
 .temperatura,
 .umidade {
