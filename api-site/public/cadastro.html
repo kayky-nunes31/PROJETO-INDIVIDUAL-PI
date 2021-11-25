@@ -36,6 +36,9 @@
                         Nome:
                         <input name="nome" type="text" placeholder="Ada Lovelace">
                         <br>
+                        Idade:
+                        <input name="idade" type="text" placeholder="18">
+                        <br>
                         E-mail:
                         <input name="email" type="text" placeholder="meuemail@provedor.com">
                         <br>
@@ -80,16 +83,20 @@
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
 
         var nome = formulario.get("nome");
+        var idade = formulario.get("idade");
         var email = formulario.get("email");
         var senha = formulario.get("senha");
         var confirmacaoSenha = formulario.get("confirmacao-senha");
 
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
-        if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "") {
+        if (nome == "" || idade == "" || email == "" || senha == "" || confirmacaoSenha == "") {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nome == "") {
                 console.log('nome está em branco')
+            }
+            if(idade == "") {
+                console.log('idade está em branco')
             }
             if (email == "") {
                 console.log('email está em branco')
