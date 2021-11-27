@@ -70,13 +70,13 @@ body{
 
   .banner-login .card {
     background-color: #ffc629c4;
-    height: 500px;
+    height: 540px;
     width: 400px;
     border-radius: 20px;
     border: #f76539b6 outset 7px;
     display: flex;
     justify-content: center;
-    align-content: space-around;
+    align-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -132,6 +132,12 @@ input {
     width: 50px;
   }
 
+  select {
+    height: 30px;
+    border: solid #B32D2E 2px;
+    border-radius: 12px;
+  }
+  
 /* Footer */
 
 .footer {

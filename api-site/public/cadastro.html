@@ -39,6 +39,18 @@
                         Idade:
                         <input name="idade" type="text" placeholder="18">
                         <br>
+                        Idade:
+                        <select name="preferencia">
+                            <option value="realista">Realista</option>
+                            <option value="anime">Anime</option>
+                            <option value="fanart">FanArt</option>
+                            <option value="sombreado">Sombreado</option>
+                            <option value="degrade">Degradê</option>
+                            <option value="colorido">Colorido</option>
+                            <option value="preto_branco">Preto e Branco</option>
+                            <option value="pintura">Pintura</option>
+                        </select>
+                        <br>
                         E-mail:
                         <input name="email" type="text" placeholder="meuemail@provedor.com">
                         <br>
@@ -84,12 +96,13 @@
 
         var nome = formulario.get("nome");
         var idade = formulario.get("idade");
+        var preferencia = formulario.get("preferencia");
         var email = formulario.get("email");
         var senha = formulario.get("senha");
         var confirmacaoSenha = formulario.get("confirmacao-senha");
 
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
-        if (nome == "" || idade == "" || email == "" || senha == "" || confirmacaoSenha == "") {
+        if (nome == "" || idade == "" || preferencia == "" || email == "" || senha == "" || confirmacaoSenha == "") {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nome == "") {
@@ -97,6 +110,9 @@
             }
             if(idade == "") {
                 console.log('idade está em branco')
+            }
+            if(preferencia == "") {
+                console.log('preferencia não escolhida')
             }
             if (email == "") {
                 console.log('email está em branco')
