@@ -20,9 +20,138 @@
     <!-- scripts do Chart.js -->
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
+    <script>
+        function idade_dezoito() {
+            fetch("/usuarios/idade_dezoito").then(function (resposta) {
+                console.log("ESTOU NO THEN DO idade_dezoito()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        idade_18 = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(idade_18.Idade);
+                        sessionStorage.IDADE_18 = idade_18.Idade;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+        function idade_onze() {
+            fetch("/usuarios/idade_onze").then(function (resposta) {
+                console.log("ESTOU NO THEN DO idade_onze()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        idade_11 = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(idade_11.Idade);
+                        sessionStorage.IDADE_11 = idade_11.Idade;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+        function idade_dezessete() {
+            fetch("/usuarios/idade_dezessete").then(function (resposta) {
+                console.log("ESTOU NO THEN DO idade_dezessete()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        idade_17 = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(idade_17.Idade);
+                        sessionStorage.IDADE_17 = idade_17.Idade;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+        function idade_dezenove() {
+            fetch("/usuarios/idade_dezenove").then(function (resposta) {
+                console.log("ESTOU NO THEN DO idade_dezenove()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        idade_19 = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(idade_19.Idade);
+                        sessionStorage.IDADE_19 = idade_19.Idade;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+        function idade_dez() {
+            fetch("/usuarios/idade_dez").then(function (resposta) {
+                console.log("ESTOU NO THEN DO idade_dez()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        idade_10 = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(idade_10.Idade);
+                        sessionStorage.IDADE_10 = idade_10.Idade;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+        function idade_trinta() {
+            fetch("/usuarios/idade_trinta").then(function (resposta) {
+                console.log("ESTOU NO THEN DO idade_trinta()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        idade_30 = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(idade_30.Idade);
+                        sessionStorage.IDADE_30 = idade_30.Idade;
+
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
+
+    </script>
+
 </head>
 
-<body onload="validarSessao(), atualizarFeed()">
+<body onload="mudarNome(), idade_dezoito(), idade_onze(), idade_dezessete(), idade_dezenove(), idade_dez(), idade_trinta()">
     <!-- <body onload="validarSessao()"> -->
 
     <div class="janela">
@@ -81,16 +210,31 @@
 </html>
 
 <script>
+
+function mudarNome() {
+
+var nome = sessionStorage.NOME_USUARIO;
+
+
+if (nome != null) {
+    b_usuario.innerHTML = nome;
+
+}
+}
+
+
+
+
     function dash_idade(){
     var ctx = document.getElementById('chartlineI').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         
         data: {
-            labels: ["Entre 11 a 15 anos", "Entre 16 e 17 anos", "Tem 18 anos", "Entre 19 a 30 anos", "Menos de 10 anos", "Mais de 31 anos"],
+            labels: ["Entre 11 a 15 anos", "Entre 16 e 17 anos", "Tem 18 anos", "Entre 19 a 29 anos", "Menos de 10 anos", "Mais de 30 anos"],
             datasets: [{
-                label: 'Quantas pessoas desenham (ou gostam) da mesma idade',
-                data: [11, 10.6, 13.6, 11.4, 6.8, 9.3],
+                label: 'Quantas pessoas desenham da mesma idade',
+                data: [Number(sessionStorage.IDADE_11), Number(sessionStorage.IDADE_17), Number(sessionStorage.IDADE_18), Number(sessionStorage.IDADE_19), Number(sessionStorage.IDADE_10), Number(sessionStorage.IDADE_30)],
                 backgroundColor: [
                     'rgba(255, 0, 0, 0.2)',
                     'rgba(0, 0, 235, 0.2)',
@@ -155,7 +299,7 @@
                     }
                 }
             });
-    }
+    }    
     </script>
 
     

@@ -20,12 +20,10 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 ); 
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
-);
-
 select * from usuario;
+
+select * from usuario join aviso on fk_usuario = id;
+
+SELECT COUNT(idade) as Idade FROM usuario WHERE idade = '18';
+
+SELECT COUNT(idade) as Idade FROM usuario WHERE idade between '11' and '15';

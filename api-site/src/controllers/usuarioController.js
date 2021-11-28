@@ -1,5 +1,113 @@
 var usuarioModel = require("../models/usuarioModel");
 
+// DASH IDADE DE USUARIOS COM 18 ANOS
+function idade_dezoito(req, res) {
+    usuarioModel.idade_dezoito()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+// DASH IDADE DE USUARIOS ENTRE 11 E 15 ANOS
+function idade_onze(req, res) {
+    usuarioModel.idade_onze()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+// DASH IDADE DE USUARIOS ENTRE 16 E 17 ANOS
+function idade_dezessete(req, res) {
+    usuarioModel.idade_dezessete()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+// DASH IDADE DE USUARIOS COM MENOS DE 10 ANOS
+function idade_dez(req, res) {
+    usuarioModel.idade_dez()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+// DASH IDADE DE USUARIOS COM MENOS DE 10 ANOS
+function idade_dezenove(req, res) {
+    usuarioModel.idade_dezenove()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+// DASH IDADE DE USUARIOS COM MAIS DE 21 ANOS
+function idade_trinta(req, res) {
+    usuarioModel.idade_trinta()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 var sessoes = [];
 
 function testar(req, res) {
@@ -99,5 +207,11 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
+    idade_dezoito,
+    idade_onze,
+    idade_dezessete,
+    idade_dezenove,
+    idade_dez,
+    idade_trinta,
     testar
 }
