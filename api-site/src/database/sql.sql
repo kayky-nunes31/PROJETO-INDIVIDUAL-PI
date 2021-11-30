@@ -27,3 +27,19 @@ select * from usuario join aviso on fk_usuario = id;
 SELECT COUNT(idade) as Idade FROM usuario WHERE idade = '18';
 
 SELECT COUNT(idade) as Idade FROM usuario WHERE idade between '11' and '15';
+
+SELECT MAX(idade) as MaiorIdade FROM usuario;
+
+SELECT MIN(idade) as MenorIdade FROM usuario;
+
+SELECT MAX(idade) as MaiorIdade, MIN(idade) as MaiorIdade FROM usuario;
+
+SELECT truncate(avg(idade), 2) as Media FROM usuario;
+
+
+/*
+INSERT INTO usuario VALUES
+(100, 'Kayky', '18', 'sombreado', 'kayky@gmail.com', '123456');
+
+UPDATE usuario SET idade = '19' WHERE nome = 'Kayky';	
+*/

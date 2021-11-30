@@ -229,7 +229,12 @@ body {
   justify-content: center;
 }
 
+/* CASO EU RETIRE O COMENTARIO SCROLLBAR SOME
 
+#div_mostrar_status::-webkit-scrollbar {
+  color: #E8383B;
+}
+......................................*/
 .button_status {
   color: #fff;
   padding: 5px;
