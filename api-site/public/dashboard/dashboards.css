@@ -78,6 +78,8 @@ body {
   align-items: stretch;
   border-bottom: 3px solid #ff7043;
   padding: 20px;
+  /*-webkit-text-stroke-width: #000;*/
+  background: linear-gradient(to right, #fe8c00, #f83600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .publicacao > *:not(:last-child) {
@@ -106,7 +108,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #000;
+  background-color: #001;
 }
 
 /* INICIO DA ALTERAÇÃO DE PERFIL*/
@@ -138,7 +140,7 @@ body {
 }
 
 .perfil {
-  width: 17%;
+  width: 16%;
   height: 100%;
   border-radius: 100px;
   border: outset 5px #ff7043;
@@ -295,4 +297,18 @@ body {
   color: white;
   background-color: #ff7043;
   margin: 5px;
+}
+
+/*BOX DO GRÁFICO*/
+.box_graph {
+  width: 70%;
+  height: 40%;
+  background-color: #212124;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15%;
+  border: #ff7043 outset 4px;
+  border-radius: 20px;
+  margin-top: 1%;
 }

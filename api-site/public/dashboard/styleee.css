@@ -266,7 +266,7 @@ form {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #ff7043;
-  background-color: #000000;
+  background-color: #001;
   /* border: 3px solid pink; */
 }
 
@@ -274,7 +274,7 @@ form {
   display: flex;
   width: 75%;
   height: fit-content;
-  background-color: #000000;
+  background-color: #001;
   position: relative;
   top: 0;
   left: 25%;
@@ -316,6 +316,13 @@ form {
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
+}
+
+.btn-nav-white:hover {
+  transition: background 1s;
+  background-color: rgb(0,0,0,0);
+  color: #960303;
+  box-shadow: inset 0 0 0 3px #960303;
 }
 
 .btn-nav-white h3 {
